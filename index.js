@@ -6,7 +6,7 @@ import { z } from "zod";
 
 const server = new McpServer({
     name: "mcp-migadu",
-    version: "0.0.1"
+    version: "2.0.1"
 });
 
 // this MCP at the moment lets you add a new alias to an existing inbox :)
