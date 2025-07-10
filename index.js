@@ -42,7 +42,7 @@ async function createAlias({ alias, domain, forwarding_address }) {
    const data = await response.json();
 
    return {
-        content: [{ type: "type", text: JSON.stringify(data) }]
+        content: [{ type: "text", text: JSON.stringify(data) }]
    };
 }
 

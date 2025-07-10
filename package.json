@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "I'm building an AI Agent MCP Platform to interface with @migadu's API",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
