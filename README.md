@@ -35,7 +35,7 @@ You can create an alias of another email.
 
 #### Schema
 
-```
+```json
 alias: z.string().describe("The raw inbox name part of the alias. e.g if the alias is hello@example.com, enter hello."),
 domain: z.string().describe("The domain of the email address. e.g. example.com"),
 forwarding_address: z.string().describe("The existing email address that the alias should forward to. Can only be on the same domain. e.g. hello@example.com as the alias can only forward to leo@example.com")
