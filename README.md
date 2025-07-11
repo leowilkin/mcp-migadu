@@ -1,12 +1,10 @@
 # Migadu MCP
 
-I'm building an AI Agent MCP Platform to interface with Migadu's API!
-
-At the moment, you can create an alias by asking Claude Desktop.
+I'm building an AI Agent MCP Platform to interface with Migadu's API! Think chatting with an assistant that can make and edit your inbox settings on Migadu - how efficient & simple!
 
 ## Installation Instructions
 
-You can install this to your IDE or LLM wrapper using this config, using Claude as an example!
+You can install this to your IDE or LLM wrapper using this config, using Claude Desktop's config here as an example!
 
 ```json
 {
@@ -31,12 +29,27 @@ You can install this to your IDE or LLM wrapper using this config, using Claude 
 
 ### Aliases
 
-You can create an alias of another email.
+- Create a new email alias (alias_create)
+- Show an existing alias (alias_show)
+- Index all aliases (alias_index)
 
-#### Schema
+### Mailboxes
 
-```json
-alias: z.string().describe("The raw inbox name part of the alias. e.g if the alias is hello@example.com, enter hello."),
-domain: z.string().describe("The domain of the email address. e.g. example.com"),
-forwarding_address: z.string().describe("The existing email address that the alias should forward to. Can only be on the same domain. e.g. hello@example.com as the alias can only forward to leo@example.com")
-```
+- Index all mailboxes (mailbox_index)
+- Show the details of a mailbox (mailbox_show)
+- Create a new mailbox (mailbox_create)
+
+### Forwardings
+
+- Index all forwardings (forwardings_index)
+- Show the details of a foreward (forwardings_show)
+- Create a new email forwarding - a bit broken rn (forwardings_create)
+
+### Others
+
+Yes, there are quite a few that have been excluded, but this was mostly a design choice to prevent LLMs mucking up your emails.
+
+## Reference
+
+- [Migadu API Documentation](https://migadu.com/api/)
+- Hack Club's [Toolsmith Guide](https://toolsmith.hackclub.com/guide.html)
