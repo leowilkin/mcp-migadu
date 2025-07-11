@@ -1,0 +1,96 @@
+{
+  "dxt_version": "0.1",
+  "name": "mcp-migadu",
+  "display_name": "Migadu",
+  "version": "3.0.0",
+  "description": "Administer your Migadu email accounts using natural language & AI",
+  "author": {
+    "name": "Leo Wilkin",
+    "email": "leo@wilkin.xyz",
+    "url": "https://wilkin.xyz"
+  },
+  "homepage": "https://github.com/leowilkin/mcp-migadu",
+  "documentation": "https://github.com/leowilkin/mcp-migadu",
+  "icon": "migadu.png",
+  "server": {
+    "type": "node",
+    "entry_point": "index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/index.js"
+      ],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "alias_create",
+      "description": "Create a new email alias"
+    },
+    {
+      "name": "alias_show",
+      "description": "Show an existing elias"
+    },
+    {
+      "name": "alias_index",
+      "description": "List all aliases for a domain"
+    },
+    {
+      "name": "mailbox_index",
+      "description": "Index all mailboxes"
+    },
+    {
+      "name": "mailbox_show",
+      "description": "Show the details of a mailbox"
+    },
+    {
+      "name": "mailbox_create",
+      "description": "Create a new mailbox"
+    },
+    {
+      "name": "forwardings_index",
+      "description": "Index all forwardings for a domain"
+    },
+    {
+      "name": "forwardings_show",
+      "description": "Show the details of a forwarding"
+    },
+    {
+      "name": "forwardings_create",
+      "description": "Create a new forwarding"
+    }
+  ],
+  "user_config": {
+    "MIGADU_API_KEY": {
+      "type": "string",
+      "title": "Migadu API Key",
+      "description": "https://admin.migadu.com/account/api/keys",
+      "required": true,
+      "sensitive": true
+    },
+    "MIGADU_ROOT_DOMAIN": {
+      "type": "string",
+      "title": "Root Domain",
+      "description": "This will be the domain you want to administer, e.g. example.com",
+      "required": true,
+      "sensitive": false
+    },
+    "MIGADU_USER": {
+      "type": "string",
+      "title": "Admin Email",
+      "description": "The email address of the person who generated the API key.",
+      "required": true,
+      "sensitive": false
+    }
+  },
+  "keywords": [
+    "migadu",
+    "email"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leowilkin/mcp-migadu"
+  }
+}
