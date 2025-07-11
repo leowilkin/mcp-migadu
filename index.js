@@ -89,18 +89,13 @@ async function mailbox_index({ domain }) {
 async function mailbox_show({ local_part, domain }) {
     const url = `https://api.migadu.com/v1/domains/${domain}/mailboxes/${local_part}`;
     const auth = Buffer.from(`${process.env.MIGADU_USER}:${process.env.MIGADU_API_KEY}`).toString('base64');
-    const body = JSON.stringify ({
-        local_part,
-        domain
-    });
 
     const response = await fetch(url, {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Authorization': `Basic ${auth}`,
             'Content-Type': 'application/json'
         },
-        body,
     });
 
     if (!response.ok) {
