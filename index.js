@@ -6,7 +6,7 @@ import { z } from "zod";
 
 const server = new McpServer({
     name: "mcp-migadu",
-    version: "2.1.0"
+    version: "2.2.0"
 });
 
 // this MCP at the moment lets you add a new alias to an existing inbox :)
@@ -36,7 +36,7 @@ async function createAlias({ alias, domain, forwarding_address }) {
     });
 
     if (!response.ok) {
-    throw new Error(`Couldn't create new alias.`);
+    throw new Error(`Couldn't create new alias:`, response.body);
    }
 
    const data = await response.json();

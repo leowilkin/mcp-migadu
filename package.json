@@ -1,6 +1,6 @@
 {
   "name": "mcp-migadu",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "I'm building an AI Agent MCP Platform to interface with @migadu's API",
   "main": "index.js",
   "type": "module",

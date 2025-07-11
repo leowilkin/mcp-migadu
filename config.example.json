@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+        "mcp-migadu": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-migadu"
+            ],
+            "env": {
+                "MIGADU_API_KEY": "api_key",
+                "MIGADU_ROOT_DOMAIN": "domain",
+                "MIGADU_USER": "user's email"
+            }
+        }
+    }
+}
