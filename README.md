@@ -29,6 +29,8 @@ You can install this to your IDE or LLM wrapper using this config, using Claude 
 }
 ```
 
+For more info, refer to the [demo config file](https://github.com/leowilkin/mcp-migadu/blob/main/config.example.json).
+
 ## Features
 
 ### Aliases
