@@ -6,7 +6,7 @@ import { z } from "zod";
 
 const server = new McpServer({
     name: "mcp-migadu",
-    version: "2.2.1"
+    version: "3.0.0"
 });
 
 async function alias_create({ alias, domain, address, is_internal }) {
