@@ -2,6 +2,10 @@
 
 I'm building an AI Agent MCP Platform to interface with Migadu's API! Think chatting with an assistant that can make and edit your inbox settings on Migadu - how efficient & simple!
 
+## Demo
+
+[![Watch the video](demo.mp4)](demo.mp4)
+
 ## Installation Instructions
 
 You can install this to your IDE or LLM wrapper using this config, using Claude Desktop's config here as an example!
@@ -43,7 +47,7 @@ You can install this to your IDE or LLM wrapper using this config, using Claude 
 
 - Index all forwardings (forwardings_index)
 - Show the details of a foreward (forwardings_show)
-- Create a new email forwarding - a bit broken rn (forwardings_create)
+- Create a new email forwarding (forwardings_create)
 
 ### Others
 

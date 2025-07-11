@@ -210,14 +210,12 @@ async function forwardings_show({ local_part, forwarding_address, domain }) {
    };
 }
 
-async function forwardings_create({ local_part, domain, forwarding_address }) {
+async function forwardings_create({ local_part, domain, address }) {
     const url = `https://api.migadu.com/v1/domains/${domain}/mailboxes/${local_part}/forwardings`;
     const auth = Buffer.from(`${process.env.MIGADU_USER}:${process.env.MIGADU_API_KEY}`).toString('base64');
-    const body = JSON.stringify ({
-        local_part,
-        destinations: [forwarding_address],
+    const body = JSON.stringify({
+        address
     });
-
 
     const response = await fetch(url, {
         method: 'POST',
@@ -229,16 +227,15 @@ async function forwardings_create({ local_part, domain, forwarding_address }) {
     });
 
     if (!response.ok) {
-    throw new Error(`Couldn't create a new forwarding: (${response.status}): ${response.body}`);
+        throw new Error(`Couldn't create a new forwarding: (${response.status}): ${response.body}`);
     }
 
-   const data = await response.json();
+    const data = await response.json();
 
-   return {
+    return {
         content: [{ type: "text", text: JSON.stringify(data) }]
-   };
+    };
 }
-
 
 server.registerTool("alias_create", {
     title: "Create a new email alias",
