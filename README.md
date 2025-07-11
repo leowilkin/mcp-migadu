@@ -4,7 +4,7 @@ I'm building an AI Agent MCP Platform to interface with Migadu's API! Think chat
 
 ## Demo
 
-[![Watch the video](demo.mp4)](demo.mp4)
+[![Watch the video](https://files.catbox.moe/1t8shb.mp4)](https://files.catbox.moe/1t8shb.mp4)
 
 ## Installation Instructions
 
